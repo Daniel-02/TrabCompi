@@ -1,0 +1,86 @@
+import java_cup.runtime.*;
+
+/* Terminals */
+terminal COMMA, SEMICOLON, LEFTPAREN, RIGHTPAREN;
+terminal LESSTHAN, MORETHAN, EQUALTO, MULT, DIV, MINUS, PLUS, ASSIGNMENT;
+terminal IF, THEN, ELSE, DEF;
+terminal IDENTIFIER;
+terminal INTEGER;
+
+/* Nonterminals */
+non terminal program;
+non terminal methodDeclaration;
+non terminal methodDeclarationChain;
+non terminal arguments;
+non terminal expression;
+non terminal expressionChain;
+non terminal sequence;
+non terminal sequenceChain;
+non terminal opRel;
+non terminal opArit;
+
+/* Precedence */
+precedence right ASSIGNMENT;
+precedence left LESSTHAN;
+precedence left PLUS, MINUS;
+precedence left LEFTPAREN, RIGHTPAREN;
+
+
+start with program;
+
+program ::= IDENTIFIER ASSIGNMENT INTEGER SEMICOLON program
+         |
+            methodDeclarationChain
+         ;
+
+methodDeclarationChain ::= methodDeclaration SEMICOLON methodDeclarationChain
+                        |
+                           methodDeclaration
+                        ;
+
+methodDeclaration ::= DEF IDENTIFIER LEFTPAREN arguments RIGHTPAREN ASSIGNMENT expression SEMICOLON 
+		   ;
+
+arguments ::= IDENTIFIER COLON arguments
+           |
+              IDENTIFIER
+           ;
+
+sequence := expression sequenceChain
+         ;				
+
+sequenceChain := COLON sequence
+              |/* empty */
+              ;
+
+expression := INTEGER expressionChain
+           |  
+              IDENTIFIER expressionChain
+           |  
+              IF  expression opRel expression THEN expression ELSE expression expressionChain
+           |  
+              IDENTIFIER LEFTPAREN sequence RIGHTPAREN expressionChain
+           ;
+
+expressionChain := opArit expression
+                |/* empty */
+                ;
+
+opRel := LESSTHAN
+      |
+	MORETHAN
+      |
+        EQUALTO
+      ;
+
+opArit := MULT
+       |
+          DIV
+       |
+          MINUS
+       |
+          PLUS
+       ;
+
+
+
