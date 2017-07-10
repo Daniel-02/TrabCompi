@@ -33,12 +33,11 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\3\1\2\1\0\1\3\1\1\22\0\1\3\7\0\1\42"+
-    "\1\43\1\5\1\33\1\36\1\34\1\30\1\4\1\6\11\7\1\0"+
-    "\1\37\1\35\1\32\3\0\22\10\1\25\7\10\4\0\1\10\1\0"+
-    "\1\10\1\16\1\20\1\10\1\22\1\23\2\10\1\11\2\10\1\17"+
-    "\1\27\1\12\1\31\1\14\1\10\1\21\1\24\1\13\1\15\3\10"+
-    "\1\26\1\10\1\40\1\0\1\41\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff92\0";
+    "\11\0\1\3\1\2\1\0\1\3\1\1\22\0\1\3\7\0\1\32"+
+    "\1\33\1\5\1\23\1\30\1\24\1\0\1\4\1\6\11\7\1\0"+
+    "\1\31\1\25\1\27\1\26\2\0\32\10\4\0\1\11\1\0\3\10"+
+    "\1\22\1\16\1\13\1\10\1\15\1\12\2\10\1\20\1\10\1\17"+
+    "\4\10\1\21\1\14\6\10\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff95\0";
 
   /** 
    * Translates characters to character classes
@@ -51,14 +50,13 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\2\2\1\1\2\3\6\4\1\5\1\6"+
-    "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16"+
-    "\1\2\1\0\1\4\1\17\4\4\2\0\1\20\4\4"+
-    "\1\0\2\4\1\21\4\4\1\22\1\23\1\4\13\0"+
-    "\1\24";
+    "\1\0\1\1\2\2\1\3\1\4\2\5\5\6\1\7"+
+    "\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17"+
+    "\1\2\1\0\1\20\3\6\1\21\2\0\2\6\1\22"+
+    "\1\0\1\23\1\24";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[61];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -83,17 +81,14 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\44\0\110\0\44\0\154\0\44\0\220\0\264"+
-    "\0\330\0\374\0\u0120\0\u0144\0\u0168\0\44\0\44\0\44"+
-    "\0\44\0\44\0\44\0\44\0\44\0\44\0\44\0\u018c"+
-    "\0\u01b0\0\u01d4\0\264\0\u01f8\0\u021c\0\u0240\0\u0264\0\u0288"+
-    "\0\u02ac\0\264\0\u02d0\0\u02f4\0\u0318\0\u033c\0\u0360\0\u0384"+
-    "\0\u03a8\0\264\0\u03cc\0\u03f0\0\u0414\0\u0438\0\264\0\264"+
-    "\0\u045c\0\u0480\0\u04a4\0\u04c8\0\u04ec\0\u0510\0\u0534\0\u0558"+
-    "\0\u057c\0\u05a0\0\u05c4\0\u05e8\0\44";
+    "\0\0\0\34\0\70\0\34\0\124\0\34\0\34\0\160"+
+    "\0\214\0\250\0\304\0\340\0\374\0\34\0\34\0\34"+
+    "\0\34\0\u0118\0\34\0\34\0\34\0\34\0\u0134\0\u0150"+
+    "\0\214\0\u016c\0\u0188\0\u01a4\0\34\0\u01c0\0\u01dc\0\u01f8"+
+    "\0\u0214\0\214\0\u0230\0\214\0\214";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[61];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -116,35 +111,21 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\2\4\1\5\1\2\1\6\1\7\1\10"+
-    "\1\11\2\10\1\12\4\10\1\13\1\14\2\10\1\15"+
-    "\2\10\1\2\1\10\1\16\1\17\1\20\1\21\1\22"+
-    "\1\23\1\24\1\25\1\26\1\27\46\0\1\4\45\0"+
-    "\1\30\1\31\44\0\2\7\42\0\22\10\1\0\1\10"+
-    "\20\0\4\10\1\32\10\10\1\33\4\10\1\0\1\10"+
-    "\20\0\7\10\1\34\12\10\1\0\1\10\20\0\14\10"+
-    "\1\35\5\10\1\0\1\10\20\0\11\10\1\36\10\10"+
-    "\1\0\1\10\20\0\20\10\1\37\1\10\1\0\1\10"+
-    "\12\0\1\30\1\3\1\4\41\30\5\40\1\41\36\40"+
-    "\6\0\5\10\1\42\14\10\1\0\1\10\20\0\10\10"+
-    "\1\43\11\10\1\0\1\10\20\0\5\10\1\44\14\10"+
-    "\1\0\1\10\20\0\16\10\1\45\3\10\1\0\1\10"+
-    "\20\0\16\10\1\46\3\10\1\0\1\10\12\0\5\40"+
-    "\1\47\36\40\4\0\1\4\1\41\44\0\11\10\1\50"+
-    "\10\10\1\0\1\10\20\0\7\10\1\51\12\10\1\0"+
-    "\1\10\20\0\14\10\1\52\5\10\1\0\1\10\20\0"+
-    "\5\10\1\53\14\10\1\0\1\10\12\0\4\40\1\4"+
-    "\1\47\36\40\6\0\3\10\1\54\16\10\1\0\1\10"+
-    "\20\0\13\10\1\55\6\10\1\0\1\10\20\0\14\10"+
-    "\1\56\5\10\1\0\1\10\20\0\12\10\1\57\7\10"+
-    "\1\0\1\10\20\0\4\10\1\60\15\10\1\0\1\10"+
-    "\20\0\21\10\1\61\1\0\1\10\20\0\22\10\1\62"+
-    "\1\10\43\0\1\63\27\0\1\64\41\0\1\65\60\0"+
-    "\1\66\27\0\1\67\50\0\1\70\33\0\1\71\44\0"+
-    "\1\72\44\0\1\73\47\0\1\74\36\0\1\75\31\0";
+    "\1\2\1\3\2\4\1\5\1\6\1\7\1\10\1\11"+
+    "\1\2\1\12\1\11\1\13\1\11\1\14\3\11\1\15"+
+    "\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25"+
+    "\1\26\36\0\1\4\35\0\1\27\1\30\34\0\2\10"+
+    "\32\0\15\11\17\0\5\11\1\31\7\11\17\0\7\11"+
+    "\1\32\5\11\17\0\12\11\1\33\2\11\17\0\10\11"+
+    "\1\34\4\11\40\0\1\35\4\0\1\27\1\3\1\4"+
+    "\31\27\5\36\1\37\26\36\6\0\10\11\1\40\4\11"+
+    "\17\0\13\11\1\41\1\11\17\0\5\11\1\42\7\11"+
+    "\11\0\5\36\1\43\26\36\4\0\1\4\1\37\34\0"+
+    "\11\11\1\44\3\11\17\0\10\11\1\45\4\11\11\0"+
+    "\4\36\1\4\1\43\26\36";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[1548];
+    int [] result = new int[588];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -182,12 +163,12 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\1\1\1\11\1\1\1\11\7\1\12\11"+
-    "\1\1\1\0\6\1\2\0\5\1\1\0\12\1\13\0"+
-    "\1\11";
+    "\1\0\1\11\1\1\1\11\1\1\2\11\6\1\4\11"+
+    "\1\1\4\11\1\1\1\0\4\1\1\11\2\0\3\1"+
+    "\1\0\2\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[61];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -283,7 +264,7 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 144) {
+    while (i < 122) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -655,75 +636,75 @@ class LexicalAnalyzer implements java_cup.runtime.Scanner {
             }
           case 22: break;
           case 3: 
-            { return new Symbol(Sym.INTEGER);
+            { return new Symbol(Sym.DIV);
             }
           case 23: break;
           case 4: 
-            { return new Symbol(Sym.IDENTIFIER);
+            { return new Symbol(Sym.MULT);
             }
           case 24: break;
           case 5: 
-            { return new Symbol(Sym.ASSIGNMENT);
+            { return new Symbol(Sym.INTEGER);
             }
           case 25: break;
           case 6: 
-            { return new Symbol(Sym.PLUS);
+            { return new Symbol(Sym.IDENTIFIER);
             }
           case 26: break;
           case 7: 
-            { return new Symbol(Sym.MINUS);
+            { return new Symbol(Sym.PLUS);
             }
           case 27: break;
           case 8: 
-            { return new Symbol(Sym.LESSTHAN);
+            { return new Symbol(Sym.MINUS);
             }
           case 28: break;
           case 9: 
-            { return new Symbol(Sym.COMMA);
+            { return new Symbol(Sym.LESSTHAN);
             }
           case 29: break;
           case 10: 
-            { return new Symbol(Sym.SEMICOLON);
+            { return new Symbol(Sym.MORETHAN);
             }
           case 30: break;
           case 11: 
-            { return new Symbol(Sym.LEFTCURLY);
+            { return new Symbol(Sym.ASSIGNMENT);
             }
           case 31: break;
           case 12: 
-            { return new Symbol(Sym.RIGHTCURLY);
+            { return new Symbol(Sym.COMMA);
             }
           case 32: break;
           case 13: 
-            { return new Symbol(Sym.LEFTPAREN);
+            { return new Symbol(Sym.SEMICOLON);
             }
           case 33: break;
           case 14: 
-            { return new Symbol(Sym.RIGHTPAREN);
+            { return new Symbol(Sym.LEFTPAREN);
             }
           case 34: break;
           case 15: 
-            { return new Symbol(Sym.IF);
+            { return new Symbol(Sym.RIGHTPAREN);
             }
           case 35: break;
           case 16: 
-            { return new Symbol(Sym.INT);
+            { return new Symbol(Sym.IF);
             }
           case 36: break;
           case 17: 
-            { return new Symbol(Sym.ELSE);
+            { return new Symbol(Sym.EQUALTO);
             }
           case 37: break;
           case 18: 
-            { return new Symbol(Sym.PUBLIC);
+            { return new Symbol(Sym.DEF);
             }
           case 38: break;
           case 19: 
-            { return new Symbol(Sym.RETURN);
+            { return new Symbol(Sym.THEN);
             }
           case 39: break;
           case 20: 
-            { return new Symbol(Sym.PRINTLN);
+            { return new Symbol(Sym.ELSE);
             }
           case 40: break;
           default:

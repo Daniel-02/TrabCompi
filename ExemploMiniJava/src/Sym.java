@@ -7,44 +7,44 @@
 public class Sym {
   /* terminals */
   public static final int SEMICOLON = 3;
-  public static final int ELSE = 12;
-  public static final int PLUS = 10;
-  public static final int INT = 14;
+  public static final int ELSE = 16;
+  public static final int PLUS = 12;
+  public static final int THEN = 15;
   public static final int IDENTIFIER = 18;
-  public static final int RETURN = 16;
-  public static final int IF = 13;
-  public static final int PUBLIC = 15;
+  public static final int IF = 14;
+  public static final int EQUALTO = 8;
   public static final int COMMA = 2;
-  public static final int LESSTHAN = 8;
+  public static final int LESSTHAN = 6;
   public static final int EOF = 0;
-  public static final int PRINTLN = 17;
-  public static final int MINUS = 9;
+  public static final int MULT = 9;
+  public static final int DEF = 17;
+  public static final int DIV = 10;
+  public static final int MORETHAN = 7;
+  public static final int MINUS = 11;
   public static final int error = 1;
   public static final int INTEGER = 19;
-  public static final int ASSIGNMENT = 11;
-  public static final int RIGHTPAREN = 7;
-  public static final int LEFTPAREN = 6;
-  public static final int RIGHTCURLY = 5;
-  public static final int LEFTCURLY = 4;
+  public static final int ASSIGNMENT = 13;
+  public static final int RIGHTPAREN = 5;
+  public static final int LEFTPAREN = 4;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
   "COMMA",
   "SEMICOLON",
-  "LEFTCURLY",
-  "RIGHTCURLY",
   "LEFTPAREN",
   "RIGHTPAREN",
   "LESSTHAN",
+  "MORETHAN",
+  "EQUALTO",
+  "MULT",
+  "DIV",
   "MINUS",
   "PLUS",
   "ASSIGNMENT",
-  "ELSE",
   "IF",
-  "INT",
-  "PUBLIC",
-  "RETURN",
-  "PRINTLN",
+  "THEN",
+  "ELSE",
+  "DEF",
   "IDENTIFIER",
   "INTEGER"
   };
